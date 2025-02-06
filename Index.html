@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xat en Temps Real</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Inicia sessió al xat</h2>
+      <input type="text" id="usuari" placeholder="Escriu el teu nom" />
+      <button onclick="iniciarSessio()">Iniciar sessió</button>
+    </div>
+
+    <div id="xat-container" class="xat-container" style="display: none">
+      <h2>Xat en temps real 💬</h2>
+      <div id="missatges" class="missatges"></div>
+      <input
+        type="text"
+        id="inputMissatge"
+        placeholder="Escriu un missatge..."
+      />
+      <button onclick="enviarMissatge()">Enviar</button>
+      <div id="usuaris-container">
+        <h3>Usuaris connectats:</h3>
+        <div id="llista-usuaris"></div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
